@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.List-Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.Delete-Button {
+    background-color: #00363B;
+    color: white;
+    border-color: #00363B;
+
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    width: 30%;
+    transition-duration: 0.4s;
+    margin-top: 5em;
+}
+
+.Delete-Button:hover {
+    background-color: white;
+    color: #00363B;
+    border-color: #00363B;
+
+    cursor: pointer;
+}
+
+.Checkbox:hover {
+    cursor: pointer;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 1.4em;
+}
+
+td {
+    font-size: 1.25em;
+}
