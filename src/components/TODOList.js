@@ -44,9 +44,9 @@ function TODOList() {
                     </tr>
                 </thead>
                 <tbody>
-                    { taskList.map((value, index) => {
+                    { taskList.map((value) => {
                         return (
-                            <tr key={ index } className="Item">
+                            <tr key={ value.name } className="Item">
                                 <td><input type="checkbox" className="Checkbox" onClick={() => onSelect(value) }/></td>
                                 <Item data={ value }></Item>
                             </tr>
