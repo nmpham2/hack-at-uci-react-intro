@@ -12,13 +12,14 @@ function TODOList() {
     var tasksToDelete = [];
     
     function onSelect(value) {
-        const index = taskList.indexOf(value);
+        const index = tasksToDelete.indexOf(value);
         // console.log(value);
         if (index === -1) {
-            const removeIndex = tasksToDelete.indexOf(2);
-            tasksToDelete.splice(removeIndex, 1);
-        } else {
+            // if the value is not in tasksToDelete already, add it
             tasksToDelete.push(value);
+        } else {
+            // if the value is already in tasksToDelete, remove it
+            tasksToDelete.splice(index, 1);
         }
         console.log("selected tasks ", tasksToDelete);
     }
