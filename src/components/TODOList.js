@@ -34,6 +34,7 @@ function TODOList() {
 
     return (
         <div className="List-Content">
+            <h1>TODO List</h1>
             <table>
                 <thead>
                     <tr>
@@ -60,4 +61,3 @@ function TODOList() {
   }
   
   export default TODOList;
-  

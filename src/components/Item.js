@@ -1,9 +1,11 @@
+import TableCell from '@mui/material/TableCell';
+
 function Item(props) {
     return (
       <>
-        <td>{props.data.name}</td>
-        <td>{props.data.deadline}</td>
-        <td>{props.data.description}</td>
+        <TableCell>{ props.data.name }</TableCell>
+        <TableCell>{ props.data.deadline }</TableCell>
+        <TableCell>{ props.data.description }</TableCell>
       </>
     );
   }

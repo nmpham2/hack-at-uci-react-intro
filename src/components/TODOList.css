@@ -3,7 +3,7 @@
 .List-Content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
     align-content: center;
@@ -19,7 +19,7 @@
     font-size: 1em;
     width: 30%;
     transition-duration: 0.4s;
-    margin-top: 5em;
+    margin-top: 40px;
 }
 
 .Delete-Button:hover {
@@ -40,7 +40,8 @@ table {
 }
 
 th {
-    font-size: 1.4em;
+    font-size: 1.3em;
+    text-align: left;
 }
 
 td {
