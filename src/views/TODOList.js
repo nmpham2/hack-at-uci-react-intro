@@ -6,7 +6,7 @@ function TODOList() {
   const [taskList, updateTaskList] = useState([]);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const tasksToDelete = [];
+  const [tasksToDelete, setTasksToDelete] = useState([]);
 
   function addTask() {
     updateTaskList((taskList) => [
@@ -21,10 +21,13 @@ function TODOList() {
     let index = tasksToDelete.indexOf(task);
     if (index === -1) {
       // if the value is not in tasksToDelete already, add it
-      tasksToDelete.push(task);
+      setTasksToDelete((tasksToDelete) => [...tasksToDelete, task]);
     } else {
       // if the value is already in tasksToDelete, remove it
       tasksToDelete.splice(index, 1);
+      setTasksToDelete(
+        tasksToDelete.filter((task) => !tasksToDelete.includes(task))
+      );
     }
   }
 
