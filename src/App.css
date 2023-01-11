@@ -1,19 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
-
 .App {
-  background-image: linear-gradient(to right, #006d77 , #83c5be);
-  text-align: center;
   display: flex;
   align-items: center;
-  align-content: center;
-  justify-content: center;
   height: 100vh;
-  font-family: 'Poppins', sans-serif;
-}
-
-.Home {
-  background-color: white;
-  border-radius: 10px;
-  width: 75%;
-  box-shadow: 10px 10px 5px #006d77;
+  justify-content: center;
 }
