@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./Home.css";
+
 import Box from "@mui/material/Box";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
@@ -6,8 +8,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import MaterialTODOList from "../views/MaterialTODOList";
 import TODOList from "../views/TODOList";
-
-import "./Home.css";
+import MaterialList from "../views/MaterialList";
 
 const muiTheme = createTheme({
   palette: {
@@ -41,12 +42,18 @@ function Home() {
     updateStyle("MUI");
   }
 
+  const groceryList = {
+    title : "Grocery List",
+    header1 : "Food",
+    header2 : "Quantity"
+  };
+
   return (
     <div className="Home">
       <div className="Container">
         <ThemeProvider theme={muiTheme}>
           {(style === "Manual CSS" && <TODOList />) ||
-            (style === "MUI" && <MaterialTODOList />)}
+            (style === "MUI" && <MaterialList data={ groceryList } />)}
           <Box p={4}>
             <FormControlLabel
               control={<Switch />}
