@@ -1,3 +1,9 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .list-content {
   display: flex;
   align-items: center;

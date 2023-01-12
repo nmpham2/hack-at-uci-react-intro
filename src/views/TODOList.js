@@ -37,7 +37,7 @@ function TODOList() {
   }
 
   return (
-    <div>
+    <div className="list">
       <h1>TODO List</h1>
       <div className="list-content">
         <div className="table">
