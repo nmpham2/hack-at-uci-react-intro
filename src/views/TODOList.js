@@ -37,60 +37,71 @@ function TODOList() {
   }
 
   return (
-    <div className="list-content">
+    <div>
       <h1>TODO List</h1>
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Task</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          {taskList.map((task) => {
-            return (
-              <tr key={task.name}>
-                <td>
-                  <input
-                    type="checkbox"
-                    className="checkbox"
-                    onClick={() => onSelect(task)}
-                  />
-                </td>
-                <td>{task.name}</td>
-                <td>{task.description}</td>
+      <div className="list-content">
+        <div className="table">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Task</th>
+                <th>Description</th>
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <form
-        onSubmit={(event) => {
-          addTask();
-          event.preventDefault();
-        }}
-      >
-        <h4>New Task</h4>
-        <input
-          type="text"
-          value={name}
-          onChange={(event) => {
-            setName(event.target.value);
-          }}
-        />
-        <h4>New Description</h4>
-        <textarea
-          value={description}
-          onChange={(event) => {
-            setDescription(event.target.value);
-          }}
-        />
-        <input className="button" type="submit" value="Add Task" />
-      </form>
-      <button className="button" onClick={onDelete}>
-        Delete Completed Tasks
-      </button>
+            </thead>
+            <tbody>
+              {taskList.map((task) => {
+                return (
+                  <tr key={task.name}>
+                    <td>
+                      <input
+                        type="checkbox"
+                        className="checkbox"
+                        onClick={() => onSelect(task)}
+                      />
+                    </td>
+                    <td>{task.name}</td>
+                    <td>{task.description}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          <button className="button" onClick={onDelete}>
+            Delete Completed Tasks
+          </button>
+        </div>
+        
+        <div className="mini-container">
+          <form
+            onSubmit={(event) => {
+              addTask();
+              event.preventDefault();
+            }}
+          >
+            <div>
+              <h4>New Task</h4>
+              <input
+                type="text"
+                value={name}
+                onChange={(event) => {
+                  setName(event.target.value);
+                }}
+              />
+            </div>
+            <div>
+              <h4>New Description</h4>
+              <textarea
+                value={description}
+                onChange={(event) => {
+                  setDescription(event.target.value);
+                }}
+              />
+            </div>
+            <input className="button self" type="submit" value="Add Task" />
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

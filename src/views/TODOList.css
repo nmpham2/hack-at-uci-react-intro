@@ -1,21 +1,30 @@
 .list-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .checkbox:hover {
   cursor: pointer;
 }
 
-table {
-  width: 80%;
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
   border-collapse: collapse;
+  flex-grow: 1;
 }
 
 th {
   font-size: 1.3em;
   text-align: left;
+  padding: 1em;
 }
 
 .button {
@@ -25,7 +34,7 @@ th {
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
   font-size: 1em;
-  width: 30%;
+  width: 200px;
   margin-top: 40px;
   transition-duration: 0.4s;
 }
@@ -36,18 +45,10 @@ th {
   cursor: pointer;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
 input {
   font-size: 1em;
   border-radius: 5px;
   border-width: 2px;
-  width: 30%;
 }
 
 textarea {
@@ -55,5 +56,13 @@ textarea {
   border-radius: 5px;
   border-width: 2px;
   height: 50px;
-  width: 30%;
+}
+
+.mini-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  flex-grow: 1;
 }

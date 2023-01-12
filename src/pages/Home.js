@@ -43,17 +43,19 @@ function Home() {
 
   return (
     <div className="Home">
-      <ThemeProvider theme={muiTheme}>
-        {(style === "Manual CSS" && <TODOList />) ||
-          (style === "MUI" && <MaterialTODOList />)}
-        <Box p={4}>
-          <FormControlLabel
-            control={<Switch />}
-            onChange={onSwitch}
-            label={style}
-          />
-        </Box>
-      </ThemeProvider>
+      <div className="Container">
+        <ThemeProvider theme={muiTheme}>
+          {(style === "Manual CSS" && <TODOList />) ||
+            (style === "MUI" && <MaterialTODOList />)}
+          <Box p={4}>
+            <FormControlLabel
+              control={<Switch />}
+              onChange={onSwitch}
+              label={style}
+            />
+          </Box>
+        </ThemeProvider>
+      </div>
     </div>
   );
 }
