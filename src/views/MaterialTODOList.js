@@ -64,53 +64,60 @@ function MaterialTODOList() {
   return (
     <Stack spacing={4} pt={4} px={4} alignItems="center">
       <Typography variant="h1">TODO List</Typography>
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell></TableCell>
-              <TableCell>Task</TableCell>
-              <TableCell>Deadline</TableCell>
-              <TableCell>Description</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {taskList.map((task) => {
-              return (
-                <TableRow key={task.name}>
-                  <TableCell>
-                    <Checkbox onClick={() => onSelect(task)} />
-                  </TableCell>
-                  <TableCell>{task.name}</TableCell>
-                  <TableCell>{task.deadline}</TableCell>
-                  <TableCell>{task.description}</TableCell>
+      <Stack direction="row" spacing={15}>
+        <Stack spacing={4}>
+          <TableContainer component={Paper}>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell></TableCell>
+                  <TableCell>Task</TableCell>
+                  <TableCell>Deadline</TableCell>
+                  <TableCell>Description</TableCell>
                 </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <h4>New Task</h4>
-      <Input
-        value={name}
-        onChange={(event) => {
-          setName(event.target.value);
-        }}
-      />
-      <h4>New Description</h4>
-      <TextField
-        multiline
-        value={description}
-        onChange={(event) => {
-          setDescription(event.target.value);
-        }}
-      />
-      <Button variant="contained" onClick={addTask} sx={{ borderRadius: 10 }}>
-        Add Task
-      </Button>
-      <Button variant="contained" onClick={onDelete} sx={{ borderRadius: 10 }}>
-        Delete Completed Tasks
-      </Button>
+              </TableHead>
+              <TableBody>
+                {taskList.map((task) => {
+                  return (
+                    <TableRow key={task.name}>
+                      <TableCell>
+                        <Checkbox onClick={() => onSelect(task)} />
+                      </TableCell>
+                      <TableCell>{task.name}</TableCell>
+                      <TableCell>{task.deadline}</TableCell>
+                      <TableCell>{task.description}</TableCell>
+                    </TableRow>
+                  );
+                })}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <Button variant="contained" onClick={onDelete} sx={{ borderRadius: 10 }}>
+            Delete Completed Tasks
+          </Button>
+        </Stack>
+        
+        <Stack spacing={4}>
+          <h4>New Task</h4>
+          <Input
+            value={name}
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+          />
+          <h4>New Description</h4>
+          <TextField
+            multiline
+            value={description}
+            onChange={(event) => {
+              setDescription(event.target.value);
+            }}
+          />
+          <Button variant="contained" onClick={addTask} sx={{ borderRadius: 10 }}>
+            Add Task
+          </Button>
+        </Stack>
+      </Stack>
     </Stack>
   );
 }
