@@ -28,32 +28,34 @@ function MaterialList(props) {
     const [col1, setCol1] = useState("");
     const [col2, setCol2] = useState("");
 
-    const rowsToDelete = [];
+    const [rowsToDelete, setRowsToDelete] = useState([]);
 
     function addItem() {
         updateRows((rows) => [
-        ...rows,
-        { col1: col1, col2: col2 },
-        ]);
-        setCol1("");
-        setCol2("");
+            ...rows,
+            { col1: col1, col2: col2 },
+            ]);
+            setCol1("");
+            setCol2("");
     }
 
     function onSelect(row) {
         let index = rowsToDelete.indexOf(row);
-
         if (index === -1) {
-            // if the value is not in tasksToDelete already, add it
-            rowsToDelete.push(row);
+        // if the value is not in rowsToDelete already, add it
+        setRowsToDelete((rowsToDelete) => [...rowsToDelete, row]);
         } else {
-            // if the value is already in tasksToDelete, remove it
-            rowsToDelete.splice(index, 1);
+        // if the value is already in rowsToDelete, remove it
+        rowsToDelete.splice(index, 1);
+        setRowsToDelete(
+            rowsToDelete.filter((row) => !rowsToDelete.includes(row))
+        );
         }
     }
 
     function onDelete() {
         updateRows(rows.filter((item) => !rowsToDelete.includes(item)));
-        rowsToDelete = [];
+        setRowsToDelete([]);
     }
 
     return (

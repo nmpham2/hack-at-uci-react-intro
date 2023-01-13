@@ -6,9 +6,10 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
-import MaterialTODOList from "../views/MaterialTODOList";
-import TODOList from "../views/TODOList";
+// import MaterialTODOList from "../views/MaterialTODOList";
+// import TODOList from "../views/TODOList";
 import MaterialList from "../views/MaterialList";
+import List from "../views/List";
 
 const muiTheme = createTheme({
   palette: {
@@ -52,7 +53,7 @@ function Home() {
     <div className="Home">
       <div className="Container">
         <ThemeProvider theme={muiTheme}>
-          {(style === "Manual CSS" && <TODOList />) ||
+          {(style === "Manual CSS" && <List data={ groceryList }/>) ||
             (style === "MUI" && <MaterialList data={ groceryList } />)}
           <Box p={4}>
             <FormControlLabel

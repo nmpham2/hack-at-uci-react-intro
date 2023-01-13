@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "./TODOList.css";
+import "./List.css";
 
 function TODOList() {
   const [taskList, updateTaskList] = useState([]);
@@ -33,7 +33,7 @@ function TODOList() {
 
   function onDelete() {
     updateTaskList(taskList.filter((task) => !tasksToDelete.includes(task)));
-    tasksToDelete = [];
+    setTasksToDelete([]);
   }
 
   return (
