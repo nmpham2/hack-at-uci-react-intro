@@ -1,39 +1,36 @@
-.list {
-  display: flex;
-  flex-direction: column;
+.List {
   text-align: center;
 }
 
-.list-content {
+.listContainer {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  align-content: center;
-  text-align: center;
   justify-content: center;
+  flex-grow: 1;
+}
+
+.addContainer {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+table {
+  display: table-header-group;
+  word-break: break-all;
 }
 
 .checkbox:hover {
   cursor: pointer;
 }
 
-.table {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  justify-content: center;
-  border-collapse: collapse;
-  flex-grow: 1;
-}
-
-th {
-  font-size: 1.3em;
-  text-align: left;
-  padding: 1em;
-}
-
-.button {
+.btn {
   background-color: #00363b;
   color: white;
   border-color: #00363b;
@@ -45,30 +42,23 @@ th {
   transition-duration: 0.4s;
 }
 
-.button:hover {
+.btn:hover {
   background-color: white;
   color: #00363b;
   cursor: pointer;
 }
 
 input {
+  font-family: "Poppins", sans-serif;
   font-size: 1em;
   border-radius: 5px;
   border-width: 2px;
 }
 
 textarea {
+  font-family: "Poppins", sans-serif;
   font-size: 1em;
   border-radius: 5px;
   border-width: 2px;
   height: 50px;
-}
-
-.mini-container {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  justify-content: center;
-  flex-grow: 1;
 }

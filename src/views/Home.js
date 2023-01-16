@@ -1,15 +1,16 @@
 import { useState } from "react";
 import "./Home.css";
 
-import Box from "@mui/material/Box";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import {
+  Box,
+  FormControlLabel,
+  Switch,
+  ThemeProvider,
+  createTheme,
+} from "@mui/material";
 
-// import MaterialTODOList from "../views/MaterialTODOList";
-// import TODOList from "../views/TODOList";
-import MaterialList from "../views/MaterialList";
-import List from "../views/List";
+import List from "./ListComponents/List";
+import MaterialList from "./MaterialListComponents/MaterialList";
 
 const muiTheme = createTheme({
   palette: {
@@ -24,14 +25,13 @@ const muiTheme = createTheme({
     fontFamily: ["Poppins", "sans-serif"].join(","),
     fontSize: 14,
     h1: {
-      fontFamily: ["Poppins", "sans-serif"].join(","),
-      fontSize: 36,
+      fontSize: 32,
       fontWeight: "bold",
     },
   },
 });
 
-function Home() {
+function Home(props) {
   const [style, updateStyle] = useState("Manual CSS");
 
   function onSwitch() {
@@ -43,18 +43,12 @@ function Home() {
     updateStyle("MUI");
   }
 
-  const groceryList = {
-    title : "Grocery List",
-    header1 : "Food",
-    header2 : "Quantity"
-  };
-
   return (
     <div className="Home">
-      <div className="Container">
+      <div className="container">
         <ThemeProvider theme={muiTheme}>
-          {(style === "Manual CSS" && <List data={ groceryList }/>) ||
-            (style === "MUI" && <MaterialList data={ groceryList } />)}
+          {(style === "Manual CSS" && <List {...props} />) ||
+            (style === "MUI" && <MaterialList {...props} />)}
           <Box p={4}>
             <FormControlLabel
               control={<Switch />}
