@@ -1,74 +1,22 @@
-# hack-at-uci-react-intro
+# Hack at UCI: React.js Intro Workshop
 
-Full demo code for Hack at UCI's Intro to React Workshop
+Full demo code for Hack at UCI's Intro to React Workshop! This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Check out our presentation on React [here](https://docs.google.com/presentation/d/1XjLBstc3PbuewfuyuI4ZwO7Lk91StZnI45dKvWjQTVw/edit#slide=id.gd38a374474_0_2498)!
 
-# Getting Started with Create React App
+## 🎒 Intro 🎒
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is made up of various components, mainly: App (displays our application), Home (a container for our lists), List (a container which displays our table using CSS), MaterialList (a container which displays our table using the [Material UI library](https://mui.com/)). Our workshop breaks down React.js, and we hope to teach students about this component-based library in an easy-to-understand project!
 
-## Available Scripts
+The finished webpage should display a table of items (the contents of which are dynamic) which a user can select items to delete or add items through an input form. 
 
-In the project directory, you can run:
+## ✏️ How-To ✏️
 
-### `npm start`
+- Open up your terminal of choice (ex: Git Bash, Powershell, etc.), and clone this repository.
+- Once you cd into your cloned repository, run `npm start` and the web page should open on [http://localhost:3000](http://localhost:3000)! 🎉🎉
+- Open up the repository in your IDE of choice and try editing files. Whenver you save the file, you should notice the webpage re-rendering and displaying your changes.
+- The main branch 🌳 contains the starter code for this project which has various TODO items. For the solutions to these tasks, feel free to look at our `finished-demo` branch.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🖥️ Stay updated by checking out our… 🖥️
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website: https://hack.ics.uci.edu/ 
+- Discord: https://discord.gg/2gZjQMjKeF 
+- Facebook: https://www.facebook.com/UCI.Hack 
