@@ -26,6 +26,10 @@ table {
   word-break: break-all;
 }
 
+th, td {
+  padding-inline: 1vw;
+}
+
 .checkbox:hover {
   cursor: pointer;
 }
