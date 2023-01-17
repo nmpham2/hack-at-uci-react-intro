@@ -1,30 +1,54 @@
 import { useState } from "react";
 
+/* 
+  Since this component utilizes CSS rather than Material UI
+  components, we have to import our own CSS file.
+*/
 import "./List.css";
 
 function List(props) {
-  // The List component takes in an object with 3 values:
-  // title as a String and 2 headers as Strings
+  /*
+    The List component takes in an object with 3 values:
+    title as a String and 2 headers as Strings then displays them.
+    Compare this file with MaterialList.js.
+  */
   const { title, header1, header2 } = props.listType;
 
+  /*
+    Here, we are storing our rows as a list which we will later iterate through
+    and display in our table. We are also storing col1 and col2 as Strings (these
+    are used in our addItem function to store the values the user inputs). The
+    rowsToDelete variable is used to store rows the user selects. 
+  */
   const [rows, setRows] = useState([]);
   const [col1, setCol1] = useState("");
   const [col2, setCol2] = useState("");
   const [rowsToDelete, setRowsToDelete] = useState([]);
 
   function addItem() {
+    /*
+      This function adds a new entry into our rows variable using the 
+      values that are inputted into the addItem form. The syntax may look a bit
+      funky, but basically we are appending the {col1: col1, col2: col2} object
+      into what we already are storing in our rows. We reset col1 and col2 to
+      be empty after we've added our value.
+    */
     setRows((rows) => [...rows, { col1: col1, col2: col2 }]);
     setCol1("");
     setCol2("");
   }
 
   function onSelect(row) {
+    /*
+      This function handles what occurs when a user selects a row in the
+      table. 
+    */
     let index = rowsToDelete.indexOf(row);
     if (index === -1) {
-      // if the value is not in rowsToDelete already, add it
+      // If the value is not in rowsToDelete already, we add it
       setRowsToDelete((rowsToDelete) => [...rowsToDelete, row]);
     } else {
-      // if the value is already in rowsToDelete, remove it
+      // If the value is already in rowsToDelete, we remove it
       rowsToDelete.splice(index, 1);
       setRowsToDelete(
         rowsToDelete.filter((row) => !rowsToDelete.includes(row))
@@ -33,6 +57,13 @@ function List(props) {
   }
 
   function onDelete() {
+    /*
+      This function handles what occurs when a user selects the 
+      delete button. It removes the items that the user selected from our
+      rows variable which causes a re-render and removes the rows from 
+      our table. We reset rowsToDelete after to make sure we don't try
+      to delete an already deleted row.
+    */
     setRows(rows.filter((item) => !rowsToDelete.includes(item)));
     setRowsToDelete([]);
   }
