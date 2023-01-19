@@ -12,7 +12,8 @@ const todoList = {
 };
 
 function Todo() {
-  return <Home listType={todoList} />;
+  // TODO: Reuse the Home component to render the list view
+  return <h1>This is the Todo page!</h1>;
 }
 
 export default Todo;

@@ -12,7 +12,8 @@ const groceryList = {
 };
 
 function Grocery() {
-  return <Home listType={groceryList} />;
+  // TODO: Reuse the Home component to render the list view
+  return <h1>This is the Grocery page!</h1>;
 }
 
 export default Grocery;
