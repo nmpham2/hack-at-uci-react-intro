@@ -1,7 +1,6 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 
 import Todo from "./pages/Todo";
-import Grocery from "./pages/Grocery";
 
 import "./App.css";
 
@@ -19,7 +18,6 @@ function App() {
         <Route path="/" element={<Todo />} />
         <Route path="/todo" element={<Todo />} />
         {/**TODO: Add route to Grocery page here*/}
-        <Route path="/grocery" element={<Grocery />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
