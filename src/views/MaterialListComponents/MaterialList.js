@@ -72,6 +72,10 @@ function MaterialList(props) {
     */
   }
 
+  /* TODO:
+      Add a Checkbox component into the TableCells falling under the ✅
+      header which calls the onSelect() function when the box is clicked
+  */
   return (
     <Stack spacing={4} pt={4} px={4} textAlign="center">
       <Typography variant="h1">{title}</Typography>
@@ -96,7 +100,7 @@ function MaterialList(props) {
                   return (
                     <TableRow key={item.addCol1}>
                       <TableCell>
-                        <Checkbox onClick={() => onSelect(item)} />
+                        I AM NOT A CHECKBOX
                       </TableCell>
                       <TableCell>{item.addCol1}</TableCell>
                       <TableCell>{item.addCol2}</TableCell>
@@ -116,14 +120,14 @@ function MaterialList(props) {
         </Stack>
 
         <Stack spacing={4} alignItems="center" flexGrow="1">
-          <h4>New {header1}</h4>
+          <Typography variant="h4">New {header1}</Typography>
           <Input
             value={addCol1}
             onChange={(event) => {
               setAddCol1(event.target.value);
             }}
           />
-          <h4>New {header2}</h4>
+          <Typography variant="h4">New {header2}</Typography>
           <TextField
             multiline
             value={addCol2}

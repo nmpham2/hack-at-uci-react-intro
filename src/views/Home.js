@@ -17,6 +17,7 @@ import MaterialList from "./MaterialListComponents/MaterialList";
   and fonts from the default
   MUI components. 
 */
+// TODO: Change the font of our Material UI theme to Poppins
 const muiTheme = createTheme({
   palette: {
     primary: {
@@ -27,12 +28,16 @@ const muiTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Poppins", "sans-serif"].join(","),
+    fontFamily: ["Roboto", "sans-serif"].join(","),
     fontSize: 14,
     h1: {
       fontSize: 32,
       fontWeight: "bold",
     },
+    h4: {
+      fontSize: 14,
+      fontWeight: "bold"
+    }
   },
 });
 

@@ -1,5 +1,7 @@
 .List {
   text-align: center;
+  /* TODO: Change font here! */
+  font-family: "Roboto", sans-serif;
 }
 
 .listContainer {
@@ -39,7 +41,7 @@ th, td {
   color: white;
   border-color: #00363b;
   border-radius: 10px;
-  font-family: "Poppins", sans-serif;
+  
   font-size: 1em;
   width: 200px;
   margin-top: 40px;
@@ -53,14 +55,12 @@ th, td {
 }
 
 input {
-  font-family: "Poppins", sans-serif;
   font-size: 1em;
   border-radius: 5px;
   border-width: 2px;
 }
 
 textarea {
-  font-family: "Poppins", sans-serif;
   font-size: 1em;
   border-radius: 5px;
   border-width: 2px;
