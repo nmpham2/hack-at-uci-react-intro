@@ -1,7 +1,6 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 
 import Todo from "./pages/Todo";
-import Grocery from "./pages/Grocery";
 
 import "./App.css";
 
