@@ -1,5 +1,3 @@
-import Home from "../views/Home";
-
 /* 
   We are storing our title and headers into an object for easy
   deconstruction when we pass them as props to our Home component.
