@@ -19,7 +19,6 @@ function App() {
         <Route path="/" element={<Todo />} />
         <Route path="/todo" element={<Todo />} />
         {/**TODO: Add route to Grocery page here*/}
-        <Route path="/grocery" element={<Grocery />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
