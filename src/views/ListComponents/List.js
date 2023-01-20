@@ -70,8 +70,8 @@ function List(props) {
             <thead>
               <tr>
                 <th>✅</th>
-                <th>{header1}</th>
-                <th>{header2}</th>
+                <th>Not a good header</th>
+                <th>Also not a good header</th>
               </tr>
             </thead>
             <tbody>
