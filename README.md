@@ -1,6 +1,6 @@
 # Hack at UCI: React.js Intro Workshop
 
-Full demo code for Hack at UCI's Intro to React Workshop! This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Check out our presentation on React [here](https://docs.google.com/presentation/d/1XjLBstc3PbuewfuyuI4ZwO7Lk91StZnI45dKvWjQTVw/edit#slide=id.gd38a374474_0_2498)!
+Full demo code for Hack at UCI's Intro to React Workshop! This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Check out our presentation on React [here](https://docs.google.com/presentation/d/e/2PACX-1vR7Hj9lz62wTRR652R2pv_sHV9atZ0N6iuPKuYVIZf0n-6gKCQCorGDcqOqi6S63mU2mx_RZqYuxRnk/pub?start=false&loop=false&delayms=60000)!
 
 ## 🎒 Intro 🎒
 
