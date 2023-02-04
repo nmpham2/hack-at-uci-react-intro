@@ -1,0 +1,44 @@
+.recipeContainer {
+    padding: 0px 300px 300px 300px;
+}
+
+.recipeHeaderText {
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #483C32;
+    margin: 10px;
+    padding-left: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipeTitle {
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #483C32;
+}
+
+.recipeDescription {
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    color: #483C32;
+    margin-bottom: 38px;
+}
+
+
+.Times {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    color: #483C32;
+}
+
+.filterButtonBox {
+    padding-left: 350px;
+}
+.generateButtonBox{
+    padding-right: 290px;
+}

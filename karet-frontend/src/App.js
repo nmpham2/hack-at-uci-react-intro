@@ -1,25 +1,22 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 
-import Todo from "./pages/Todo";
+import Todo from "./pages/Ingredients/Ingredients";
+import NavBar from "./components/Header/Header";
+import Recipe from "./components/Recipe/Recipe";
+import FilterButton from "./components/FilterButton/FilterButton";
+import GenerateButton from "./components/GenerateButton/GenerateButton";
 
 import "./App.css";
 
 function App() {
-  /*
-    This is the App component which is generated when we create a new React app. 
-    This is the main component in React which acts as a container for all other components.
-
-    Here, we are creating our App and providing different paths which render different 
-    components.
-  */
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Todo />} />
-        <Route path="/todo" element={<Todo />} />
-        {/**TODO: Add route to Grocery page here*/}
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+    <NavBar />
+      <div className="tryRecipes">
+        <h1>Try these recipes!</h1>
+        <FilterButton/>
+      </div>
+  <Recipe />
     </div>
   );
 }
