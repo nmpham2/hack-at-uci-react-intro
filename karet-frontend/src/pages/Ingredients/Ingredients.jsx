@@ -18,7 +18,7 @@ const Ingredients = () => {
   return (
     <div className="ingredientsPage">
       <div className="ingredientHeader">
-        <h1 className="title">LIST OF INGREDIENTS</h1>
+        <h1 className="title">List of Ingredients</h1>
         <div className="addButton">
         <AddIngredientButton />
         </div>
@@ -28,7 +28,6 @@ const Ingredients = () => {
     <Thead>
       <Tr>
         <Th>Name</Th>
-        <Th>Purchase date</Th>
         <Th>Expiration date</Th>
         <Th>Location</Th>
       </Tr>
@@ -36,19 +35,16 @@ const Ingredients = () => {
     <Tbody>
       <Tr>
         <Td>Tomatoes</Td>
-        <Td>02/02/2023</Td>
         <Td>02/02/2025</Td>
         <Td>Fridge</Td>
       </Tr>
       <Tr>
         <Td>Onion</Td>
-        <Td>02/02/2023</Td>
         <Td>02/02/2025</Td>
         <Td>Fridge</Td>
       </Tr>
       <Tr>
         <Td>Carrot</Td>
-        <Td>02/02/2023</Td>
         <Td>02/02/2025</Td>
         <Td>Fridge</Td>
       </Tr>

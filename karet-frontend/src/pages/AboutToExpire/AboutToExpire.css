@@ -1,0 +1,28 @@
+
+.AboutToExpireHeader {
+
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #483C32;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.title {
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #483C32;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 530px;
+}
+.AboutToExpirePage{
+
+    padding: 50px ;
+}

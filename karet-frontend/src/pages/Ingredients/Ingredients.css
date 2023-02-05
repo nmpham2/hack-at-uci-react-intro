@@ -3,7 +3,7 @@
 }
 
 .ingredientHeader{
-    padding-left: 500px;
+    padding-left: px;
     font-size: 15px;
     font-weight:Bold;
     font-family: 'Inter', sans-serif;
@@ -11,6 +11,8 @@
     align-items: center;
     display: flex;
     margin-bottom: 10px;
+    
+
 }
 
 .addButton {
@@ -26,4 +28,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+   
 }
