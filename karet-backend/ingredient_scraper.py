@@ -20,7 +20,7 @@ def is_url_empty(url: str) -> bool:
     return len(recipes) == 0
 
 
-def ingredients_to_url(ingredients: dict, offset = 0) -> str:
+def ingredients_to_url(ingredients: str, offset = 0) -> str:
     """
     Given a dictionary of ingredients, returns a url
     string to so that we can strape this bad baby 
@@ -34,8 +34,8 @@ def ingredients_to_url(ingredients: dict, offset = 0) -> str:
                  value = [date_bought: str, days_until_expiration: int, location: str]
     """
     ingredients_str = ""
-    for ingredient_name, data in ingredients.items():
-        ingredients_str += ingredient_name + ' '
+    for ingredient_data in ingredients:
+        ingredients_str += ingredient_data[0] + ' '
     url_str = BASE_URL + urlencode({'q': ingredients_str, 'offset': offset})
     return url_str
 
@@ -167,8 +167,5 @@ def ingredients_to_recipe_json(ingredients: dict, n: int) -> dict:
     return json.dumps(ingredients_to_recipe_dict(ingredients,n))
 
 if __name__ == "__main__":
-    ingredients = {
-    'Flour':['1/30/2023',20,'Counter'],
-    'Baking Soda':['1/31/2023',50,'Fridge'],
-    }   
+    ingredients = [["Flour"], ["Eggs"], ["Baking soda"]]
     print(ingredients_to_recipe_dict(ingredients, 10))
