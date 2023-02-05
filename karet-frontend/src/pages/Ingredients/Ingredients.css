@@ -1,0 +1,33 @@
+.ingredientsPage {
+    padding: 50px;
+}
+
+.ingredientHeader{
+    padding-left: px;
+    font-size: 15px;
+    font-weight:Bold;
+    font-family: 'Inter', sans-serif;
+    color: #483C32;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+    
+
+}
+
+.addButton {
+    margin-left: auto;
+}
+
+.title {
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #483C32;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+   
+}
